@@ -1,7 +1,6 @@
 import { Item } from "components/atoms";
-import data from "data.json";
 
-const List = ({ name }) => {
+const List = ({ name, data = [] }) => {
   return (
     <ul>
       {data.map((element, index) => (
