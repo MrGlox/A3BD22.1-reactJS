@@ -4,8 +4,10 @@ import logo from "./logo.svg";
 import "./App.css";
 import data from "data.json";
 
+import { Form } from "components/atoms";
 import { List } from "components/molecules";
-import { Clock, Form } from "containers";
+
+import { Clock } from "containers";
 
 class App extends Component {
   state = { value: "" };
