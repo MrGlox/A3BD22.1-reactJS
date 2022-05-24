@@ -15,13 +15,17 @@ class App extends Component {
   render() {
     const handleChange = ({ target: { value } }) => this.setState({ value });
 
+    const filteredData = data.filter((element) =>
+      element.title.toLowerCase().includes(this.state.value.toLowerCase())
+    );
+
     return (
       <div className="App">
         <header className="App-header">
           <Clock />
 
           <Form handleChange={handleChange} value={this.state.value} />
-          <List name="firstList" data={data} />
+          <List name="firstList" data={filteredData} />
 
           <img src={logo} className="App-logo" alt="logo" />
           <p>
