@@ -2,14 +2,17 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import { List } from "components/molecules";
-import Clock from "containers/Clock";
+import { Clock, Form } from "containers";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <Clock />
+
+        <Form />
         <List name="firstList" />
+
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
