@@ -19,6 +19,9 @@ class App extends Component {
               <li>
                 <Link to="/clock">Clock</Link>
               </li>
+              <li>
+                <Link to="/fetch">Fetch</Link>
+              </li>
             </ul>
           </nav>
         </header>

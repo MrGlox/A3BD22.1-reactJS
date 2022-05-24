@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./index.css";
 import App from "./App";
-import { Apparts, Clock, Home, Error404 } from "containers";
+import { Apparts, Clock, Home, Error404, Fetch } from "containers";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -15,6 +15,7 @@ root.render(
         <Route index element={<Home />} />
         <Route path="/apparts" element={<Apparts />} />
         <Route path="/clock" element={<Clock />} />
+        <Route path="/fetch" element={<Fetch />} />
         <Route path="/*" element={<Error404 />} />
       </Routes>
     </App>
