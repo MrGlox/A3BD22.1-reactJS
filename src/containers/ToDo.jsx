@@ -4,10 +4,11 @@ import TodoForm from "containers/TodoForm";
 import { TodoList } from "components/molecules";
 
 const ToDo = () => {
-  const [list, setList] = useState([
-    { isFinished: false, content: "Tache 1" },
-    { isFinished: true, content: "Tache 2" },
-  ]);
+  const [list, setList] = useState(
+    JSON.parse(localStorage.getItem("list")) ?? []
+  );
+
+  localStorage.setItem("list", JSON.stringify(list));
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
