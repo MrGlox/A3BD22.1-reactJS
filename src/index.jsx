@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./index.css";
 import App from "./App";
-import { Apparts, Clock, Home, Error404, Fetch } from "containers";
+import { Apparts, Clock, Home, Error404, Fetch, ToDo } from "containers";
 import reportWebVitals from "./reportWebVitals";
 import AppartDetails from "containers/AppartDetails";
 
@@ -18,6 +18,7 @@ root.render(
         <Route path="/apparts/:appartSlug" element={<AppartDetails />} />
         <Route path="/clock" element={<Clock />} />
         <Route path="/fetch" element={<Fetch />} />
+        <Route path="/todo" element={<ToDo />} />
         <Route path="/*" element={<Error404 />} />
       </Routes>
     </App>

@@ -22,6 +22,9 @@ class App extends Component {
               <li>
                 <Link to="/fetch">Fetch</Link>
               </li>
+              <li>
+                <Link to="/todo">To Do</Link>
+              </li>
             </ul>
           </nav>
         </header>

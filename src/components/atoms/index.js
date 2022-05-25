@@ -1,4 +1,6 @@
 import Form from "./Form";
 import Item from "./Item";
 
-export { Form, Item };
+import TodoItem from "./TodoItem/TodoItem";
+
+export { Form, Item, TodoItem };
