@@ -1,6 +1,6 @@
-const TodoForm = () => {
+const TodoForm = ({ handleSubmit }) => {
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input type="text" />
       <input type="submit" value="Ajouter" />
     </form>

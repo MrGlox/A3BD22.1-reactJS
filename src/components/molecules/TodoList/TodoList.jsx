@@ -1,10 +1,17 @@
 import { TodoItem } from "components/atoms";
 
-const TodoList = () => {
+const TodoList = ({ list = [], handleScribble }) => {
   return (
     <ul>
-      <TodoItem isFinished={true}>Tache 1</TodoItem>
-      <TodoItem isFinished={false}>Tache 2</TodoItem>
+      {list.map(({ content, ...rest }, index) => (
+        <TodoItem
+          key={index}
+          {...rest}
+          handleScribble={() => handleScribble(index)}
+        >
+          {content}
+        </TodoItem>
+      ))}
     </ul>
   );
 };
