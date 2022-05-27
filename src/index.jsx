@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createGlobalStyle } from "styled-components";
 
 import "./index.css";
 import App from "./App";
@@ -10,11 +11,17 @@ import AppartDetails from "containers/AppartDetails";
 
 import { Provider as MainProvider } from "contexts/Main";
 import { Provider as ModalProvider } from "contexts/Modal";
+import normalize from "styled-normalize";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const GlobalStyle = createGlobalStyle`
+ ${normalize}
+`;
+
 root.render(
   <BrowserRouter>
+    <GlobalStyle />
     <MainProvider>
       <ModalProvider>
         <App>
