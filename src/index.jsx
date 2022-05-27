@@ -8,20 +8,24 @@ import { Apparts, Clock, Home, Error404, Fetch, ToDo } from "containers";
 import reportWebVitals from "./reportWebVitals";
 import AppartDetails from "containers/AppartDetails";
 
+import { Provider } from "contexts/Main";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <App>
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="/apparts" element={<Apparts />} />
-        <Route path="/apparts/:appartSlug" element={<AppartDetails />} />
-        <Route path="/clock" element={<Clock />} />
-        <Route path="/fetch" element={<Fetch />} />
-        <Route path="/todo" element={<ToDo />} />
-        <Route path="/*" element={<Error404 />} />
-      </Routes>
-    </App>
+    <Provider>
+      <App>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/apparts" element={<Apparts />} />
+          <Route path="/apparts/:appartSlug" element={<AppartDetails />} />
+          <Route path="/clock" element={<Clock />} />
+          <Route path="/fetch" element={<Fetch />} />
+          <Route path="/todo" element={<ToDo />} />
+          <Route path="/*" element={<Error404 />} />
+        </Routes>
+      </App>
+    </Provider>
   </BrowserRouter>
 );
 
