@@ -1,12 +1,20 @@
 import { createContext, useContext, useState } from "react";
 
+import data from "data.json";
+
 const MainContext = createContext();
 
 export const Provider = ({ children }) => {
-  const [test, setTest] = useState("Mon test");
+  const [value, setValue] = useState("");
+
+  const handleChange = ({ target: { value } }) => setValue(value);
+
+  const filteredData = data.filter((element) =>
+    element.title.toLowerCase().includes(value.toLowerCase())
+  );
 
   return (
-    <MainContext.Provider value={{ test, setTest }}>
+    <MainContext.Provider value={{ value, filteredData, handleChange }}>
       {children}
     </MainContext.Provider>
   );

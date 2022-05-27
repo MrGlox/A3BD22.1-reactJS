@@ -1,20 +1,16 @@
 import logo from "logo.svg";
+import useModal from "contexts/Modal";
 
 const Home = () => {
+  const { setOpen } = useModal();
+
   return (
     <>
       <img src={logo} className="App-logo" alt="logo" />
       <p>
         Edit <code>src/App.js</code> and save to reload.
       </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
+      <button onClick={() => setOpen(true)}>Open Modal</button>
     </>
   );
 };
